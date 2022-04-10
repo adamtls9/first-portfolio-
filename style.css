@@ -275,9 +275,10 @@ header button {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 30vh;
 }
 
+*/
 /* sekcja 1 nasze cechy */
 
 .features {
@@ -299,7 +300,7 @@ section {
 }
 
 .features p {
-  font-family: 'Saira', sans-serif;
+  font-family: 'saira condensed', sans-serif;
   font-size: 12px;
   font-weight: 300;
   margin: 20px 0;
@@ -366,6 +367,9 @@ section {
   }
 }
 
+/* sekcja  portfolio */
+
+
 .portfolio {
   background-color: black;
   padding: 10px 0 30px;
@@ -431,14 +435,147 @@ section {
   flex-direction: row-reverse;
 }
 
-/* .portfolio .project:nth-of-type(even) .web {
-  float: right;
-} */
 
-@media (orientation: landscape) {
+/* sekcja motto  */
 
-  .web,
-  .about {
-    width: 50%;
+
+.motto {
+  background-image: url(/www/images/motto.jpg);
+  background-size: cover;
+  background-position: top center;
+  text-align: center;
+  color: white;
+  font-family: 'Saira Condensed', sans-serif;
+
+}
+
+.motto h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.motto p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.motto .author {
+  font-size: 12px;
+}
+
+.motto .bg {
+  padding: 30px 10px;
+  background-color: rgba(0, 63, 115, 0.5);
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+  .motto {
+    background-position: center;
+
   }
+
+  .motto h1 {
+    font-size: 50px;
+    padding-top: 40px;
+
+    margin-bottom: 60px;
+  }
+
+  .motto p {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    margin-bottom: 80px;
+  }
+
+  .motto .author {
+    font-size: 20px;
+  }
+}
+
+/* sekcja hobby */
+
+.hobby {
+  font-family: 'Saira Condensed', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hobby .item {
+  height: 40vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hobby .item:nth-of-type(1) {
+  background-image: url(/www/images/hobby1.jpg);
+}
+
+.hobby .item:nth-of-type(2) {
+  background-image: url(/www/images/hobby2.jpg);
+}
+
+.hobby .item:nth-of-type(3) {
+  background-image: url(/www/images/hobby3.jpg);
+}
+
+.hobby .item:nth-of-type(4) {
+  background-image: url(/www/images/hobby4.jpg);
+}
+
+.hobby h1 {
+  font-size: 28px;
+  padding: 20px 0;
+}
+
+.hobby .item p {
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  /* padding: 10px 0; */
+}
+
+@media (min-width:375px) {
+
+  .hobby .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hobby .item {
+  height: 50vh;
+  background-size: 100%;
+  background-position: center;
+  transition: 0.6s;
+  }
+
+  .hobby .item p {
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    font-size: 30px;
+    line-height: 50vh;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  .hobby .item:hover p {
+    opacity: 1;
+
+  }
+  .hobby .item:hover {
+    background-size: 120%;
+    
+  }
+}
+
+
+
+
+
+
+
+footer {
+  height: 30vh;
 }
